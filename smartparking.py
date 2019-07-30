@@ -18,10 +18,10 @@ firebase = firebase.FirebaseApplication('https://temp-and-humi-c3c77.firebaseio.
 def update_firebase():
     if(GPIO.input(4)) == False:
         value=1
-        print '1'
+        print 'slot is empty'
     elif(GPIO.input(4)) == True:
         value=0
-        print '0'
+        print 'slot is full search for other slot'
 
     data = value
     firebase.post('/sensor', data)
