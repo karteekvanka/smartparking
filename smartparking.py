@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 from time import sleep
-import datetime
+
 from firebase import firebase
 
 
@@ -28,5 +28,4 @@ def update_firebase():
 
 while True:
     update_firebase()
-        #sleepTime = int(sleepTime)
     sleep(2)
